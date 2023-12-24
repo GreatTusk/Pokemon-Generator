@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PokemonGenerator" default="default" basedir=".">
+    <description>Builds, tests, and runs the project PokemonGenerator.</description>
+    <import file="nbproject/build-impl.xml"/>
+
+    <!-- Define a new target to copy resources -->
+    <target name="-pre-jar">
+        <!-- Copy only resources from src/main/resources -->
+        <copy todir="${build.classes.dir}">
+            <fileset dir="main/resources"/>
+        </copy>
+    </target>
+
+    <!-- Override the compilation target to include only specific folders -->
+    <target name="-post-compile">
+        <!-- Ensure that ${build.classes.dir} exists -->
+        <mkdir dir="${build.classes.dir}" />
+        <!-- Compile only specific source files -->
+        <javac includeantruntime="false" destdir="${build.classes.dir}">
+            <src path="src"/>
+            <classpath refid="classpath"/>
+            <include name="your/package/**"/> <!-- Specify your package structure -->
+        </javac>
+    </target>
+
+    <!-- The rest of your targets remain unchanged -->
+    <target name="-post-jar">
+        <jar destfile="${dist.jar}" update="true">
+            <restrict> 
+                <archives>
+                    <zips>
+                        <fileset dir="${dist.dir}" includes="lib/*.jar"/>
+                    </zips>
+                </archives>
+            </restrict>
+        </jar>
+    </target>
+</project>

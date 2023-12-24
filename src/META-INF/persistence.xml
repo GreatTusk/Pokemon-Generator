@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="GUIPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>modelo.Pokemon</class>
+        <class>modelo.MoveCat</class>
+        <class>modelo.PokemonType</class>
+        <class>modelo.Move</class>
+        <class>modelo.Item</class>
+        <class>modelo.Ability</class>
+        <class>modelo.Nature</class>
+        <class>modelo.Pokemon_1</class>
+        <class>modelo.Ability_1</class>
+        <class>modelo.Nature_1</class>
+        <class>modelo.PokemonPaste</class>
+        <class>modelo.Item_1</class>
+        <class>modelo.Gender</class>
+        <class>modelo.PokemonType_1</class>
+        <class>modelo.MoveCat_1</class>
+        <class>modelo.Move_1</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pokepaste?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+        </properties>
+    </persistence-unit>
+</persistence>
