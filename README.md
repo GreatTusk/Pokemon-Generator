@@ -1,5 +1,9 @@
 Create and manage Pokemon teams seamlessly for Pokemon Showdown. Effortlessly build, edit, and store teams with an intuitive interface. Your go-to tool for efficient team preparation.
 
+TODO:
+-Create functionality for creating and storing teams.
+-Create a python script to automatically save teams in Pokemon Showdown
+
 
 ![Screenshot 2023-12-24 204633](https://github.com/GreatTusk/Pokemon-Generator/assets/131561675/fe5c6131-8b82-46ca-ae46-7267ea4db5d3)
 
